@@ -14,7 +14,7 @@ const Homepage = () => (
       </div>
 
       {/* TEXT CONTAINER */}
-    <div className="fixed right-10 top-1/2 transform -translate-y-1/2 lg:w-1/3 flex flex-col gap-8 text-logoYellow ">
+    <div className="fixed lg:right-10 p-3 top-1/2 transform -translate-y-1/2 lg:w-1/3 flex flex-col gap-8 text-logoYellow ">
       
         {/* TITLE */}
         <TypeAnimation className="text-4xl xl:text-5xl lg:text-2xl md:text-3xl font-Space_Grotesk mr-2"

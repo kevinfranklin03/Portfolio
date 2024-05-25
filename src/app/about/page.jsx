@@ -27,7 +27,7 @@ const About = () => {
       {/* CONTAINER */}
       <div className="h-full lg:flex" >
         {/* Text Container */}
-        <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-40 flex flex-col gap-24 md:gap-32 lg:gap-48 lg:pr-0 xl:gap-64 bg-black bg-opacity-80 w-2/3 xl:1/2">
+        <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-40 flex flex-col gap-24 md:gap-32 lg:gap-48 lg:pr-0 xl:gap-64 bg-black bg-opacity-80 lg:w-2/3 xl:1/2">
           {/* BioGraphy Container */}
           <div className="flex flex-col gap-12 justify-center">
             {/* Bio Title */}

@@ -42,7 +42,7 @@ const Contact= () => {
     >
       <div className="h-full flex flex-col pt-10 lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 items-center bg-black">
         {/* TEXT CONTAINER */}
-        <div className="h-1/2 lg:h-full lg:w-1/2 flex items-center justify-center text-6xl text-logoYellow">
+        <div className="h-1/2 lg:h-full lg:w-1/2 flex items-center justify-center lg:text-6xl text-3xl pb-6 text-logoYellow ">
           <div>
             {text.split("").map((letter, index) => (
               <motion.span
@@ -65,7 +65,7 @@ const Contact= () => {
         <form
           onSubmit={sendEmail}
           ref={form}
-          className="h-1/2 lg:h-full lg:w-1/2 bg-logoYellow rounded-xl text-xl flex flex-col gap-8 justify-center p-24"
+          className="h-1/2 lg:h-full lg:w-1/2 bg-logoYellow rounded-xl text-xl flex flex-col gap-8 justify-center lg:p-24 p-10"
         >
           <span>Dear Franklin,</span>
           <textarea

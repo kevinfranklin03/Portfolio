@@ -51,7 +51,7 @@ const x = useTransform(scrollYProgress, [0, 1], ["0%", "-75%"]);
         transition={{ duration: 1 }}
       >
         <div className="h-[600vh] relative" ref={ref}>
-          <div className="w-screen h-[calc(100vh-6rem)] flex items-center justify-center text-8xl text-center text-logoYellow bg-black opacity-80 font-Space_Grotesk">Personal Projects</div>
+          <div className="w-screen h-[calc(100vh-6rem)] flex items-center justify-center text-5xl lg:text-8xl text-center text-logoYellow bg-black opacity-80 font-Space_Grotesk">Personal Projects</div>
           <div className="sticky top-0 flex h-screen gap-4 items-center">
             <motion.div style={{ x }} className="flex">
               <div className="h-screen w-screen flex items-center justify-center bg-gradient-to-r from-logoBlue to-black" />
@@ -72,7 +72,7 @@ const x = useTransform(scrollYProgress, [0, 1], ["0%", "-75%"]);
           </div>
         </div>
         <div className="w-screen h-screen flex flex-col gap-16 items-center justify-center text-center">
-        <h1 className="text-5xl text-logoYellow font-Space_Grotesk">Do you have any inventive project initiatives on the horizon?</h1>
+        <h1 className="text-5xl text-logoYellow font-Space_Grotesk p-3">Do you have any inventive project initiatives on the horizon?</h1>
         <div className="relative">
           <motion.svg
             animate={{ rotate: 360 }}
@@ -94,9 +94,9 @@ const x = useTransform(scrollYProgress, [0, 1], ["0%", "-75%"]);
           </motion.svg>
           <Link
             href="/contact"
-            className="w-16 h-16 md:w-28 md:h-28 absolute top-0 left-0 right-0 bottom-0 m-auto bg-logoYellow text-black rounded-full flex items-center justify-center"
+            className="w-16 h-16 md:w-28 md:h-28 absolute top-0 left-0 right-0 bottom-0 m-auto text-sm lg:text-xl bg-logoYellow text-black rounded-full flex items-center justify-center"
           >
-            Contact Me
+            Connect
           </Link>
         </div>
       </div>
