@@ -90,7 +90,7 @@ const Contact= () => {
           )}
           {error && (
             <span className="text-red-600 font-semibold">
-              Something went wrong!
+              won't work, since hosting for free :(
             </span>
           )}
         </form>
