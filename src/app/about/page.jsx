@@ -6,26 +6,33 @@ import { useRef } from "react";
 
 const About = () => {
 
-  const containerRef = useRef();
+  const { scrollYProgress } = useScroll()
 
-  const { scrollYProgress } = useScroll({ container: containerRef });
+  const skillRef = useRef();
+  // const isSkillRefInView = useInView(skillRef, {once:true});
+  const isSkillRefInView = useInView(skillRef, { margin: "-100px" });
 
+
+
+  const experienceRef = useRef();
+  const isExperienceRefInView = useInView(experienceRef, { margin: "-100px" });
   return (
     <motion.div
     className="h-full"
       initial={{ y: "-200vh" }}
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
+      
     >
       {/* CONTAINER */}
-      <div className="h-full lg:flex" ref={containerRef}>
+      <div className="h-full lg:flex" >
         {/* Text Container */}
-        <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-40 flex flex-col gap-24 md:gap-32 lg:gap-48 lg:pr-0 xl:gap-64 bg-black bg-opacity-70 w-2/3 xl:1/2">
+        <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-40 flex flex-col gap-24 md:gap-32 lg:gap-48 lg:pr-0 xl:gap-64 bg-black bg-opacity-80 w-2/3 xl:1/2">
           {/* BioGraphy Container */}
           <div className="flex flex-col gap-12 justify-center">
             {/* Bio Title */}
             <h1 className="font-bold text-2xl text-logoYellow">BIOGRAPHY</h1>
-            <p className="text-lg text-logoYellow w-25">
+            <p className="text-xl text-logoYellow w-25 font-Space_Grotesk">
             As a graduate student enrolled in the Master's program for
               Computer Science at Ulster University Belfast, my fervor lies in
               the realm of Software Development. Bolstered by a robust academic
@@ -41,7 +48,7 @@ const About = () => {
               aspirations.
             </p>
             {/* Bio Quote */}
-            <span className="italic text-logoYellow">
+            <span className="italic text-logoYellow mb-20">
               Embrace challenges, innovate tirelessly, and impact society with
               every keystroke.
             </span>
@@ -58,7 +65,8 @@ const About = () => {
             >
               <path
                 d="M5 15C5 16.8565 5.73754 18.6371 7.05029 19.9498C8.36305 21.2626 10.1435 21.9999 12 21.9999C13.8565 21.9999 15.637 21.2626 16.9498 19.9498C18.2625 18.6371 19 16.8565 19 15V9C19 7.14348 18.2625 5.36305 16.9498 4.05029C15.637 2.73754 13.8565 2 12 2C10.1435 2 8.36305 2.73754 7.05029 4.05029C5.73754 5.36305 5 7.14348 5 9V15Z"
-                fill="DFE9AA"
+                stroke= '#DFE9AA'
+                strokeWidth="1"
               ></path>
               <path d="M12 6V14" stroke="#DFE9AA" strokeWidth="1"></path>
               <path
@@ -69,10 +77,16 @@ const About = () => {
             </motion.svg>
           </div>
           {/* Skills */}
-          <div className="flex flex-col gap-12 justify-center">
-            <h1 className="font-bold text-2xl text-logoYellow">SKILLS</h1>
+          <div className="flex flex-col gap-12 justify-center" ref={skillRef}>
+            <motion.h1
+             initial={{ x: "-300px" }}
+             animate={isSkillRefInView ? { x: 0 } : {}}
+             transition={{ delay: 0.2 }}
+             className="font-bold text-2xl text-logoYellow"
+            >SKILLS</motion.h1>
+            
             {/* Skill List */}
-            <div className="gap-4 flex flex-wrap">
+            <div className="gap-4 flex flex-wrap mb-40">
               <div className="rounded p-2 text-sm cursor-pointer bg-logoYellow hover:bg-logoBlue hover:text-white">
                 NodeJs
               </div>
@@ -138,7 +152,8 @@ const About = () => {
             >
               <path
                 d="M5 15C5 16.8565 5.73754 18.6371 7.05029 19.9498C8.36305 21.2626 10.1435 21.9999 12 21.9999C13.8565 21.9999 15.637 21.2626 16.9498 19.9498C18.2625 18.6371 19 16.8565 19 15V9C19 7.14348 18.2625 5.36305 16.9498 4.05029C15.637 2.73754 13.8565 2 12 2C10.1435 2 8.36305 2.73754 7.05029 4.05029C5.73754 5.36305 5 7.14348 5 9V15Z"
-                fill="FFF"
+                stroke="#DFE9AA"
+                strokeWidth="1"
               ></path>
               <path d="M12 6V14" stroke="#DFE9AA" strokeWidth="1"></path>
               <path
@@ -149,10 +164,14 @@ const About = () => {
             </motion.svg>
           </div>
           {/* Experience */}
-          <div className="flex flex-col gap-12 justify-center pb-48">
-            <h1 className="font-bold text-2xl text-logoYellow">
-              EDUCATION AND EXPERIENCE
-            </h1>
+          <div className="flex flex-col gap-12 justify-center pb-48" ref={experienceRef}>
+          <motion.h1
+             initial={{ x: "-600px" }}
+             animate={isExperienceRefInView ? { x: 0 } : {}}
+             transition={{ delay: 0.2 }}
+             className="font-bold text-2xl text-logoYellow mt-10"
+          >EDUCATION AND EXPERIENCE</motion.h1>
+            
             {/* EXPERIENCE LIST */}
             <div className="">
               {/* LIST ITEMS LEFT */}
@@ -240,7 +259,7 @@ const About = () => {
           </div>
         </div>
         {/* SVG Container */}
-        <div className="hidden lg:block w-1/3 sticky top-0 z-30 xl:w-1/3" style={{height: "700px"}}>
+        <div className="hidden lg:block w-1/3 mt-10 sticky top-0 z-30 xl:w-1/3" style={{height: "700px"}}>
           <Brain scrollYProgress={scrollYProgress} />
         </div>
       </div>

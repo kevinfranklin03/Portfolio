@@ -10,7 +10,6 @@ module.exports = {
     extend: {
       backgroundImage: {
         "home-background": "url('/public/images/bg.png')" ,
-        "sample-pic": "url('/public/images/space.png')",
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
@@ -19,6 +18,9 @@ module.exports = {
           logoBlue: '#4B6D85',
           logoYellow: '#DFE9AA',
   
+        }, 
+        fontFamily: {
+          Space_Grotesk: ['var(--font-Space_Grotesk-sans)'],
         },
       }
   },

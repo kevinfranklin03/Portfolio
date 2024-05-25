@@ -94,22 +94,22 @@ const Navbar = () => {
            {/* LOGO */}
             <div className="md:hidden lg:flex xl:w-1/3 xl:justify-center">
                 <Link href="/" className="text-sm bg-logoBlue rounded-md p-1 font-semibold flex items-center justify-center">
-                    <span className="text-logoYellow mr-1">Frankie</span>
-                    <span className="w-12 h-8 rounded bg-logoYellow text-logoBlue flex items-center justify-center">.dev</span>
+                    <span className="text-logoYellow mr-1 font-Space_Grotesk">Frankie</span>
+                    <span className="w-12 h-8 rounded bg-logoYellow text-logoBlue flex items-center justify-center font-Space_Grotesk">.dev</span>
                 </Link>
             </div>
             {/* Social */}
             <div className="hidden md:flex  w-1/4 justify-between">
-                <Link href="/">
+                <Link href="https://github.com/kevinfranklin03">
                 <Image src={githubImage} alt="/" width={27} height={27}/>
                 </Link>
-                <Link href="/">
+                <Link href="https://en-gb.facebook.com/">
                 <Image src={faceBook} alt="/" width={27} height={27} />
                 </Link>
-                <Link href="/">
+                <Link href="https://www.instagram.com/">
                 <Image src={instagram} alt="/" width={27} height={27} />
                 </Link>
-                <Link href="/">
+                <Link href="https://www.linkedin.com/in/kevinfranklin03/">
                 <Image src={linkedin} alt="/" width={27} height={27} />
                 </Link>
                 
@@ -124,7 +124,7 @@ const Navbar = () => {
                 </button>
                 {/* Menu List */}
                 { open && (
-                <motion.div variants={listVariants} initial="closed" animate= "opened" className="absolute top-0 left-0 h-screen bg-black text-white flex flex-col items-center justify-center gap-8 text-4xl z-40">
+                <motion.div variants={listVariants} initial="closed" animate= "opened" className="absolute top-0 left-0 h-screen bg-black text-white font-Space_Grotesk flex flex-col items-center justify-center gap-8 text-4xl z-40">
                     {links.map(link=>(
                     <motion.div variants={listItemVariants} className="">
                         <Link href={link.url} key={link.title}>
