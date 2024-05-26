@@ -90,7 +90,7 @@ const Contact= () => {
           )}
           {error && (
             <span className="text-red-600 font-semibold">
-              won't work, since hosting for free :(
+              Something happened, email - kevin03franklin@gmail.com
             </span>
           )}
         </form>

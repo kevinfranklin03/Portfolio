@@ -239,9 +239,9 @@ const About = () => {
                   gained fundamental programming knowledge during my bachelor's
                   </div>
                   {/* date */}
-                  <div className="p-3 text-sm font-semibold text-red-400">2024 - Present</div>
+                  <div className="p-3 text-sm font-semibold text-red-400">2020 Jun - 2023 Sep</div>
                   {/* Place */}
-                  <div className="text-logoYellow p-1 rounded  text-sm w-fit font-semibold">Ulster University Belfast</div>
+                  <div className="text-logoYellow p-1 rounded  text-sm w-fit font-semibold">Sathyabama University Chennai</div>
                 </div>
                 {/* Center */}
                 <div className="w-1/6">
