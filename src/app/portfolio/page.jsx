@@ -6,7 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 // Images of Personal Project
-import BusTracker from "/public/images/busTracker.png";
+import fileConverter from "/public/images/fileConverter.png";
 import ImageValidator from "/public/images/AWS_Rekognition.png";
 import UNO from "/public/images/UNO.png";
 
@@ -17,7 +17,7 @@ const items = [
     color: "from-black to-logoBlue",
     title: "PDF Converter CLI",
     desc: "This Node.js CLI tool enables users to convert PDF files to various formats and vice versa. It leverages the node-poppler library for PDF conversions and supports multiple file type conversions. The tool provides a simple command-line interface, guiding the user through the process of selecting the input file and destination directory.",
-    img: BusTracker,
+    img: fileConverter,
     link: "https://github.com/kevinfranklin03/File-Converter",
   },
   {
