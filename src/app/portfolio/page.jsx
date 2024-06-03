@@ -15,10 +15,10 @@ const items = [
   {
     id: 1,
     color: "from-black to-logoBlue",
-    title: "College Bus Tracking",
-    desc: "The College Bus Tracking App is a mobile application developed using React Native and Firebase. It allows users to track buses in real-time and provides essential information about bus routes, schedules, and stops.",
+    title: "PDF Converter CLI",
+    desc: "This Node.js CLI tool enables users to convert PDF files to various formats and vice versa. It leverages the node-poppler library for PDF conversions and supports multiple file type conversions. The tool provides a simple command-line interface, guiding the user through the process of selecting the input file and destination directory.",
     img: BusTracker,
-    link: "https://github.com/kevinfranklin03/bus-Tracker",
+    link: "https://github.com/kevinfranklin03/File-Converter",
   },
   {
     id: 2,
